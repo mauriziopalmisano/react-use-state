@@ -2,7 +2,6 @@ import { useState } from "react"
 
 
 function CardLanguage({
-  id = 0,
   title = 'Titolo',
   description = 'Descrizione'
 }) {
@@ -17,14 +16,12 @@ function CardLanguage({
 
   return (
     <>
-    <div className="row" key={id}>
-      <div class="card col my-3">
-        <div class="card-body">
+      <div className="card col my-3">
+        <div className="card-body">
           <button onClick={clickListener} className={`btn ${btnClass} mb-3`}>{title}</button>
-          {show && (<p>{description}</p>)}
+          {show && (<p className="card-text">{description}</p>)}
         </div>
       </div>
-    </div>
     </>
   )
 }
